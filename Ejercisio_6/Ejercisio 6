@@ -1,0 +1,46 @@
+codigo de la pagina
+
+module Compuertas(iA,iB,iC,oW,oX,oY,oZ);
+input iA,iB,iC;
+output oW,oX,oY,oZ;
+
+//Compuerta AND 3-In
+assign oW = ((iA==1'b1) && (iB==1'b1) && (iC==1'b1)) ? 1'b1 : 1'b0;
+
+//Compuerta OR 3-In
+assign oX = ((iA==1'b0) && (iB==1'b0) && (iC==1'b0)) ? 1'b0 : 1'b1;
+
+//Compuerta NOT
+assign oY = (iA == 1'b0) ? 1'b1 : 1'b0;
+
+//Compuerta XOR 2-In
+assign oZ = ((iA==1'b0) && (iB==1'b1)) ? 1'b1 : (((iA==1'b1) &&	(iB==1'b0)) ? 1'b1: 1'b0);
+
+endmodule
+
+codigo mio
+
+// Ejercicio 6: Compuertas booleanas básicas de tres entradas
+// Implementación utilizando operadores condicionales (ternarios)
+
+module Compuertas (iA,iB,iC,oW,oX,oY,oZ);
+    input  iA, iB, iC;
+    output oW, oX, oY, oZ);
+
+    // Compuerta AND de 3 entradas
+    // Da 1 solo si iA, iB e iC son 1
+    assign oW = (iA && iB && iC) ? 1'b1 : 1'b0;
+
+    // Compuerta OR de 3 entradas
+    // Da 0 solo si todas las entradas son 0; de lo contrario, 1
+    assign oX = (!iA && !iB && !iC) ? 1'b0 : 1'b1;
+
+    // Compuerta NOT
+    // Invierte el valor de iA
+    assign oY = (!iA) ? 1'b1 : 1 me0;
+
+    // Compuerta XOR de 2 entradas (iA e iB)
+    // Da 1 cuando las entradas son diferentes
+    assign oZ = (iA != iB) ? 1'b1 : 1'b0;
+
+endmodule
