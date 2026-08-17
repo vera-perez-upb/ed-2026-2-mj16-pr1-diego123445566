@@ -1,0 +1,46 @@
+Compuertas  booleanas básicas de tres entradas
+con descripción en primitivas
+
+este codigotiene un error 
+
+module Compuertas(iA,iB,iC,oW,oX,oY,oZ);
+
+input iA,iB,iC;
+output oW,oX,oY,oZ;
+
+and g1(oW,iA,iB,iC);
+nand g2(oW,iA,iB,iC);
+
+or g3(oX,iA,iB,iC);
+nor g4(oX,iA,iB,iC);
+
+not g5(oY,iA);
+not g6(oY,iB);
+not g7(oY,iC);
+
+xor g8(oZ,iA,iB,iC);
+xnor g9(oZ,iA,iB,iC);
+
+endmodule
+
+codigo corregido
+
+module Compuertas(iA,iB,iC,oAND,oNAND,oOR,oNOR,oNOT_A,oNOT_B,oNOT_C,oXOR,oXNOR);
+
+input iA,iB,iC;
+output oAND,oNAND,oOR,oNOR,oNOT_A,oNOT_B,oNOT_C,oXOR,oXNOR;
+
+and g1(oAND,iA,iB,iC);
+nand g2(oNAND,iA,iB,iC);
+
+or g3(oOR,iA,iB,iC);
+nor g4(oNOR,iA,iB,iC);
+
+not g5(oNOT_A,iA);
+not g6(oNOT_B,iB);
+not g7(oNOT_C,iC);
+
+xor g8(oXOR,iA,iB,iC);
+xnor g9(oXNOR,iA,iB,iC);
+
+endmodule
